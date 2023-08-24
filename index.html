@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-05</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hov:hover {
+            background-color: rgb(185, 184, 184);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-900 m-0">
+    <header class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
+        style="background-image: url(Images/images/banner.png); height: 500px">
+        <div class="mt-12 pt-12 px-12">
+            <h1 class="text-orange-500 text-7xl">Select Your Best Five</h1>
+            <p class="text-white mx-12 mt-12 ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                facilis
+                dolores
+                in
+                praesentium, autem
+                voluptatum nostrum nihil omnis illo. Nisi fugiat dolorum saepe quia libero corrupti suscipit esse quod
+                sed.
+            </p>
+        </div>
+    </header>
+    <main class=" mt-12 flex justify-center gap-7 mb-12">
+        <section class="grid grid-cols-3 gap-7 justify-items-center">
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-lio-messi.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">Lionel Messi</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-neymar-jr.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">Neymar Jr</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-k-mbappe.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">Kylian Mbappé</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-a-hakimi.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">A Hakimi</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-s-ramos.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">Sergio Ramos</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+            <div class="border-solid border-2 border-white w-64">
+                <img src="Images/images/card-png-n-mendes.png" alt="">
+                <div class="text-center p-5">
+                    <h3 class="text-white text-2xl">N Mendes</h3>
+                    <p class="text-gray-500 mt-3">36 Goals . 120 Assist</p>
+                    <button class="select-btn text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">SELECT</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg-neutral-950 w-64 h-64 py-3 px-4">
+                <h3 class="text-white text-2xl text-center">Selected - V</h3>
+                <ul id="player-list" class="text-gray-400">
+                </ul>
+            </div>
+            <div class="bg-neutral-950 w-64 py-4 px-6 mt-7">
+                <h3 class="text-white text-2xl text-center">Budget</h3>
+                <div class="flex justify-between mt-5">
+                    <h4 class="text-gray-400">Per Player</h4>
+                    <input id="per-player-spend-field" class="w-1/2 h-7 bg-neutral-950 border-2 border-white text-white"
+                        type="text">
+                </div>
+                <button id="spend-per-player"
+                    class="text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">Calculate</button>
+                <div class="flex justify-between mt-5">
+                    <h4 class="text-gray-400">Player Expenses</h4>
+                    <h4 class="text-white">$<span id="total-expence-player">0</span></h4>
+                </div>
+                <div class="flex justify-between mt-5">
+                    <h4 class="text-gray-400">Manager</h4>
+                    <input id="manager-field" class="w-1/2 h-7 bg-neutral-950 border-2 border-white text-white"
+                        type="text">
+                </div>
+                <div class="flex justify-between mt-5">
+                    <h4 class="text-gray-400">Coach</h4>
+                    <input id="coach-field" class="w-1/2 h-7 bg-neutral-950 border-2 border-white text-white"
+                        type="text">
+                </div>
+                <button id="spend" class="text-white bg-blue-700 text-lg mt-5 p-2 w-full hov">Calculate Total</button>
+                <div class="flex justify-between mt-5">
+                    <h4 class="text-gray-400">Total</h4>
+                    <h4 class="text-orange-500">$<span id="total-spend">0</span></h4>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
